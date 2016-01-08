@@ -25,27 +25,34 @@ sleep(1)
 prompt "2. The 'Interest Rate'"
 sleep(1)
 prompt "3. The 'Loan Duration' in years"
-space
 sleep(1)
-begin
-  begin
-    prompt "lets begin..."
+
+# setting variables for the loop
+interest_rate = ''
+annual_interest_rate = ''
+monthly_payment = ''
+monthly_interest_rate = ''
+loan_amount = ''
+loan_duration = ''
+
+loop do
+  loop do
+    space
+    prompt "Lets begin..."
     sleep(1)
     print_prompt "Input 'Loan Amount': "
     loan_amount = gets.chomp
-    print_prompt "'Input 'Loan Duration' in years: "
-    loan_duration = gets.chomp
     print_prompt "Input 'Interest Rate' Ex(4.1% as 4.1): "
     interest_rate = gets.chomp
+    print_prompt "Input 'Loan Duration' in years: "
+    loan_duration = gets.chomp
 
     prompt "1 or more inputs are invalid" unless validate_number(loan_amount) &&
                                                  validate_number(loan_duration) &&
                                                  validate_number(interest_rate)
     space
-  end until validate_number(loan_amount) &&
-    validate_number(loan_duration) &&
-    validate_number(interest_rate)
-
+    break if validate_number(loan_amount) && validate_number(loan_duration) && validate_number(interest_rate)
+  end
 
   annual_interest_rate = interest_rate.to_f / 100
   monthly_interest_rate = annual_interest_rate / 12
@@ -57,11 +64,13 @@ begin
 
   formatted_monthly_payment = format('%.2f', monthly_payment)
 
-  prompt "Total re-payment of loan: #{format('%.2f', formatted_monthly_payment.to_f * 360)}"
-  prompt "Monthly payment: #{formatted_monthly_payment}"
+  prompt "Total re-payment of loan: $#{format('%.2f', formatted_monthly_payment.to_f * 360)}"
+  prompt "Monthly payment: $#{formatted_monthly_payment}"
   space
-  print_prompt "Would you like you perform another calculation?[y/n] "
+  print_prompt "Would you like you perform another calculation? [y/n] "
   answer = gets.chomp.downcase
-end until answer[0] == 'n'
+  break if answer[0] == 'n'
+end
+
 space
 prompt "'Thanks For Using - Comments Welcome' --Nathaniel"
