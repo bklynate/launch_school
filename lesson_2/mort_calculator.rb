@@ -68,7 +68,7 @@ loop do
   prompt "Monthly payment: $#{formatted_monthly_payment}"
   space
   print_prompt "Would you like you perform another calculation? [y/n] "
-  answer = gets.chomp.downcase
+  play_again_answer = gets.chomp.downcase
   break if answer[0] == 'n'
 end
 
