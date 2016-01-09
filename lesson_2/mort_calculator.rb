@@ -69,7 +69,7 @@ loop do
   space
   print_prompt "Would you like you perform another calculation? [y/n] "
   play_again_answer = gets.chomp.downcase
-  break if answer[0] == 'n'
+  break if play_again_answer[0] == 'n'
 end
 
 space
