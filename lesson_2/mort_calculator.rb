@@ -1,4 +1,4 @@
-def space
+def blank_line
   puts "\n"
 end
 
@@ -16,7 +16,7 @@ end
 
 print_prompt "What is your name? "
 user_name = gets.chomp.capitalize
-space
+blank_line
 prompt "This program is a mortgage calculator"
 prompt "#{user_name}, this program requires 3 pieces of information"
 sleep(1)
@@ -37,7 +37,7 @@ loan_duration = ''
 
 loop do
   loop do
-    space
+    blank_line
     prompt "Lets begin..."
     sleep(1)
     print_prompt "Input 'Loan Amount': "
@@ -46,12 +46,11 @@ loop do
     interest_rate = gets.chomp
     print_prompt "Input 'Loan Duration' in years: "
     loan_duration = gets.chomp
-
-    prompt "1 or more inputs are invalid" unless validate_number(loan_amount) &&
-                                                 validate_number(loan_duration) &&
-                                                 validate_number(interest_rate)
-    space
-    break if validate_number(loan_amount) && validate_number(loan_duration) && validate_number(interest_rate)
+    inputs_are_valid = valid_number?(loan_amount) &&
+      valid_number?(loan_duration) &&
+      valid_number?(interest_rate)
+    prompt "1 or more inputs are invalid" unless inputs_are_valid
+    break if inputs_are_valid
   end
 
   annual_interest_rate = interest_rate.to_f / 100
@@ -64,13 +63,14 @@ loop do
 
   formatted_monthly_payment = format('%.2f', monthly_payment)
 
+  blank_line
   prompt "Total re-payment of loan: $#{format('%.2f', formatted_monthly_payment.to_f * 360)}"
   prompt "Monthly payment: $#{formatted_monthly_payment}"
-  space
+  blank_line
   print_prompt "Would you like you perform another calculation? [y/n] "
   play_again_answer = gets.chomp.downcase
   break if play_again_answer[0] == 'n'
 end
 
-space
+blank_line
 prompt "'Thanks For Using - Comments Welcome' --Nathaniel"
