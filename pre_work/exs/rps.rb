@@ -1,17 +1,25 @@
-puts "Welcome to Rock Paper Scissors"
-print "What is your name? "
+def blank_line
+  puts "\n"
+end
+
+def prompt(message)
+  puts ">>> #{message}"
+end
+
+prompt "Welcome to Rock Paper Scissors"
+print ">>> What is your name? "
 name = gets.chomp.capitalize
-puts "Okay, #{name} lets get started"
+prompt "Okay, #{name} lets get started"
 
-puts "\n"
+blank_line
 
-puts "The rules of the game are as follows: "
-puts "1. Rock beats Scissors"
-puts "2. Scissors beats Paper"
-puts "3. Paper beats Rock"
-puts "4. All other pairings will result in a tie."
+prompt "The rules of the game are as follows: "
+prompt "1. Rock beats Scissors"
+prompt "2. Scissors beats Paper"
+prompt "3. Paper beats Rock"
+prompt "4. All other pairings will result in a tie."
 
-puts "\n"
+blank_line
 
 begin
   choice_hash = {
@@ -23,16 +31,16 @@ begin
   print "Choose [r]ock / [p]aper / or [s]cissors: "
   begin
     player_choice = gets.chomp.downcase
-    puts "Invalid Choice, Choose either 'r' | 'p' | 's'" unless ["r","s","p"].include?(player_choice)
+    prompt "Invalid Choice, Choose either 'r' | 'p' | 's'" unless ["r","s","p"].include?(player_choice)
   end until ["r","s","p"].include?(player_choice)
 
-  puts "\n"
+  blank_line
 
-  puts "#{name} chooses #{player_choice.upcase}"
+  prompt "#{name} chooses #{player_choice.upcase}"
 
-  puts "\n"
+  blank_line
 
-  print "Computer chooses...."
+  print ">>> Computer chooses...."
 
   sleep(2)
 
@@ -40,21 +48,21 @@ begin
 
   case [player_choice, computer_choice]
   when ['r','s'], ['s','p'], ['p','r']
-    puts "#{name} chose: #{choice_hash[player_choice]} | Computer chose: #{choice_hash[computer_choice]}"
-    puts "#{name} Wins !!"
+    prompt "#{name} chose: #{choice_hash[player_choice]} | Computer chose: #{choice_hash[computer_choice]}"
+    prompt "#{name} Wins !!"
   when ['s','r'], ['p','s'], ['r','p']
-    puts "#{name} chose: #{choice_hash[player_choice]} | Computer chose: #{choice_hash[computer_choice]}"
-    puts "Computer Wins !!"
+    prompt "#{name} chose: #{choice_hash[player_choice]} | Computer chose: #{choice_hash[computer_choice]}"
+    prompt "Computer Wins !!"
   else
-    puts "Tie Game"
+    prompt "Tie Game"
   end
 
-  puts "\n"
+  blank_line
 
-  print "Would you like to play again? [y/n] "
+  print ">>> Would you like to play again? [y/n] "
 
   begin
     answer = gets.chomp.downcase
-    puts "Invalid Choice, Choose 'y' or 'n'" unless ['y','n'].include?(answer)
+    prompt "Invalid Choice, Choose 'y' or 'n'" unless ['y','n'].include?(answer)
   end until ['y','n'].include?(answer)
 end until answer == 'n'
