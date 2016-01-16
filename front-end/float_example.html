@@ -3,6 +3,10 @@
     background: #e0e0e0
   }
 
+  #columns {
+    margin: 0 0 0 220px;
+  }
+
   #primary, #secondary {
     padding: 20px 25px;
     background: #fff;
@@ -12,19 +16,21 @@
 
   #primary {
     float: right;
-    width: 65%;
+    width: 100%;
   }
 
   #secondary {
     float: left;
-    width: 25%;
+    width: 200px;
+    margin: 0 0 0 -220px;
   }
 </style>
+<div id="columns">
+  <div id="primary">
+    <h1>Main Content</h1>
+  </div>
 
-<div id="primary">
-  <h1>Main Content</h1>
-</div>
-
-<div id="secondary">
-  <h3>Sidebar content</h3>
+  <div id="secondary">
+    <h3>Sidebar content</h3>
+  </div>
 </div>
