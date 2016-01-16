@@ -3,21 +3,21 @@
     background: #e0e0e0
   }
 
-  #primary {
-    float: right;
-    width: 65%;
+  #primary, #secondary {
     padding: 20px 25px;
     background: #fff;
     box-sizing: border-box;
-  /* since there's not enough space between the columns when we get to a small enough browser width, our secondary column gets pushed below the primary column. We'll add box-sizing to have the padding taken into account when calculating the width.*/
+    /* since there's not enough space between the columns when we get to a small enough browser width, our secondary column gets pushed below the primary column. We'll add box-sizing to have the padding taken into account when calculating the width.*/
+  }
+
+  #primary {
+    float: right;
+    width: 65%;
   }
 
   #secondary {
     float: left;
     width: 25%;
-    padding: 20px 25px;
-    background: #fff;
-    box-sizing: border-box;
   }
 </style>
 
