@@ -1,29 +1,50 @@
 <style type="text/css">
-/*  Our designer doesn't like that the sidebar is changing width as the browser size changes, so we're tasked with giving it a fixed width instead.*/
+/*  Here's another important aspect of floats. Let's say you have a similar setup to what we have above, but both columns are fixed width and are inside a container with padding on all four sides.*/
   body {
     background: #e0e0e0
   }
 
+  #primary, #secondary { background: #ff9a9a; }
+
   #columns {
-    margin: 0 0 0 220px;
+    width: 900px;
+    padding: 30px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #f0f0c9;
   }
 
-  #primary, #secondary {
-    padding: 20px 25px;
-    background: #fff;
-    box-sizing: border-box;
-    /* since there's not enough space between the columns when we get to a small enough browser width, our secondary column gets pushed below the primary column. We'll add box-sizing to have the padding taken into account when calculating the width.*/
+  #columns:after {
+    display: block;
+    clear: both;
+    content: "";
   }
 
   #primary {
-    float: right;
-    width: 100%;
+    float: left;
+    width: 600px;
   }
 
   #secondary {
-    float: left;
-    width: 200px;
-    margin: 0 0 0 -220px;
+    float: right;
+    position: relative;
+    width: 280px;
+    padding: 20px;
+  }
+
+  a.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    font: bold 18px/24px Helvetica, Arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: #333333;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, .7);
   }
 </style>
 <div id="columns">
@@ -33,5 +54,6 @@
 
   <div id="secondary">
     <h3>Sidebar content</h3>
+    <a class="close" href="#">X</a>
   </div>
 </div>
