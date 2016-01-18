@@ -1,0 +1,78 @@
+@import url("whitespaces-reset.css");
+
+body {
+  font: normal 18px "Roboto Condensed", sans-serif;
+  background-image: linear-gradient(to bottom, #d1dbbd, #fcfff5);
+  background-repeat: no-repeat;
+  color: #3e606f;
+}
+
+header {
+  width: 920px;
+  padding: 20px 20px 0 20px;
+  margin: 0 auto;
+}
+
+h1 {
+  float: left;
+  padding: 45px 0 15px 115px;
+  font-size: 36px;
+  font-weight: normal;
+  color: #193441;
+  background: transparent url("img_camera.png") 0 0 no-repeat;
+}
+
+nav {
+  float: right;
+  padding: 75px 0 0 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 10px 40px 14px 40px;
+  color: #91aa9d;
+  text-decoration: none;
+  background: #fcfff5;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+nav a.active {
+  color: #fcfff5;
+  background: #91aa9d;
+}
+
+main {
+  clear: both;
+  overflow: hidden;
+  width: 960px;
+  padding: 30px;
+  background: #fff;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+img.masterphoto {
+  margin: 0 0 40px 0;
+}
+
+
+h2 {
+  font-size: 32px;
+  padding: 0 0 25px 0;
+  font-weight: normal;
+}
+
+p {
+  padding: 0 0 20px 0;
+}
+
+figure {
+  float: right;
+  padding: 0 0 0 30px;
+}
+
