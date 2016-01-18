@@ -1,0 +1,167 @@
+<form action="/login" method="post">
+  <fieldset>
+    <h1>Log In</h1>
+    <label for="email">Email address</label>
+    <input type="email" name="email" id="email" />
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" />
+    <div class="actions">
+      <input type="submit" value="Login" />
+      <button type="submit" formaction="/account/delete">Delete account</button>
+      <button type="submit" formaction="/account/password_reset">Reset password</button>
+    </div>
+  </fieldset>
+</form>
+
+<form id="search" action="/search" method="get">
+  <fieldset>
+    <input type="search" name="query" />
+  </fieldset>
+</form>
+
+<input type="submit" value="Search" form="search" /><br/><br/>
+
+<input type="text" name="phone" placeholder="(212) 555-1212" />
+
+<form action="" method="post">
+  <fieldset>
+    <dl>
+      <dt>
+        <label for="username">Desired user name</label>
+      </dt>
+      <dd>
+        <input type="text" name="username" id="username" maxlength="12" placeholder="12 characters max" />
+      </dd>
+      <dt>
+        <label for="title">Display title</label>
+      </dt>
+      <dd>
+        <input type="text" name="title" id="title" maxlength="20" placeholder="20 characters max" />
+      </dd>
+    </dl>
+    <input type="submit" value="Create account" />
+  </fieldset>
+</form>
+
+<br/>
+<br/>
+
+<form action="" method="post">
+  <fieldset>
+    <h2>Hobbies</h2>
+    <ul>
+      <li>
+        <label>
+          <input type="checkbox" name="sports" />
+          Sports
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" name="video_games" />
+          Video games
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" name="spoon_collecting" />
+          Spoon collecting
+        </label>
+      </li>
+    </ul>
+
+    <h2>Favorite Color</h2>
+    <ul>
+      <li>
+        <label>
+          <input type="radio" name="favorite_color" value="red" />
+          Red
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="favorite_color" value="orange" />
+          Orange
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="favorite_color" value="yellow" />
+          Yellow
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="favorite_color" value="green" />
+          Green
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="favorite_color" value="blue" />
+          Blue
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="favorite_color" value="indigo" />
+          Indigo
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="favorite_color" value="violet" />
+          Violet
+        </label>
+      </li>
+    </ul>
+  </fieldset>
+</form>
+
+<br>
+<br>
+
+<form action="" method="post">
+  <fieldset>
+    <dl>
+      <dt>
+        <label>Email</label>
+      </dt>
+      <dd>
+        <input type="email" name="email" disabled value="joe@lindt.com" />
+      </dd>
+      <dt>
+        <label>Full Name</label>
+      </dt>
+      <dd>
+        <input type="text" name="full_name" disabled value="Joe Lindt" />
+      </dd>
+      <dt>
+        <label for="location">Location</label>
+      </dt>
+      <dd>
+        <input type="text" name="location" id="location" placeholder="Gibsonton, FL" />
+      </dd>
+      <dt>
+        <label for="birthday">Birthday</label>
+      </dt>
+      <dd>
+        <input type="text" name="birthday" id="birthday" placeholder="2/28" />
+      </dd>
+    </dl>
+    <input type="submit" value="Save" />
+  </fieldset>
+</form>
+
+<select name="movie">
+  <optgroup label="DVD">
+    <option>Frozen</option>
+    <option>Toy Story 3</option>
+  </optgroup>
+  <optgroup label="Blu-Ray">
+    <option>Monsters, Inc</option>
+    <option>WALL-E</option>
+  </optgroup>
+</select>
+
+<textarea name="tweet" rows="5" cols="40">I just got 20% off my first purchase at joesburgers.com! You can too!</textarea>
