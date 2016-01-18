@@ -25,23 +25,15 @@
       <dd>
         <input type="tel" name="phone_number" id="phone_number" autocomplete="off" autocorrect="off"/>
       </dd>
+      <dt>
+        <label for="phone_type">Phone Type:</label>
+      </dt>
       <dd>
-        <label>
-          <input type="checkbox" name="home_phone" checked="true" autocomplete="off" autocorrect="off"/>
-            Home Phone
-        </label>
-      </dd>
-      <dd>
-        <label>
-          <input type="checkbox" name="business_phone" autocomplete="off" autocorrect="off"/>
-            Business Phone
-        </label>
-      </dd>
-      <dd>
-        <label>
-          <input type="checkbox" name="mobile_phone" autocomplete="off" autocorrect="off" />
-            Mobile Phone
-        </label>
+        <select name="phone_type" id="phone_type">
+          <option value="home" selected>Home</option>
+          <option value="work">Work</option>
+          <option value="mobile">mobile</option>
+        </select>
       </dd>
     </dl>
     <div>
@@ -49,3 +41,92 @@
     </div>
   </fieldset>
 </form>
+
+
+<form action="" method="GET">
+  <fieldset>
+    <h2>
+      News Articles
+    </h2>
+    <ul>
+      <li>
+        <label>
+          <input type="radio" name="news_articles" value="core">
+          Core
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="news_articles" value="plugins_and_libraries">
+          Plugins and Libraries
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="news_articles" value="conventions">
+          Conventions
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="news_articles" value="reviews">
+          Reviews
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="news_articles" value="opinions">
+          Opinions
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="news_articles" value="people">
+          People
+        </label>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <label>
+          <input type="checkbox" name="html">
+          HTML
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" name="css">
+          CSS
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" name="ruby">
+          Ruby
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" name="rails">
+          Rails
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" name="python">
+          Python
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" name="django">
+          Django
+        </label>
+      </li>
+    </ul>
+
+    <input type="submit" value="Filter">
+  </fieldset>
+</form>
+
+
