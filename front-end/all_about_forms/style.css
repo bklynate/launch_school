@@ -1,0 +1,38 @@
+@import url("reset.css");
+
+body {
+  font-family: 16px 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+
+dl {
+  padding: 0.5em;
+}
+
+dt {
+  float: left;
+  clear: left;
+  width: 100px;
+  text-align: right;
+  font-weight: normal;
+}
+
+dd {
+  margin: 0 0 0 105px;
+  padding: 0 0 0.5em 0;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  padding: 10px 0px 7px 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 50%
+  height: 25px;
+  font-family: 16px 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
